@@ -3,9 +3,9 @@ import { ActionParent } from "../actions/todo.action";
 import {Todo} from "../models/Todo";
 
 const initialstate: Todo[]=[
-    {titile:"Todo 1"},
-    {titile:"Todo 2"},
-    {titile:"Todo 3"},
+    {title:"Todo 1"},
+    {title:"Todo 2"},
+    {title:"Todo 3"},
 ];
 
 export function TodoReducer(state= initialstate,action:ActionParent){
