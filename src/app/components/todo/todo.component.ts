@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Todo } from 'src/app/models/Todo';
 import { observable } from 'rxjs';
 import { select,Store } from '@ngrx/store';
+import { TodoRemove } from 'src/app/actions/todo.action';
 
 @Component({
   selector: 'app-todo',
@@ -16,6 +17,10 @@ todos:Todo[];
       this.todos=values;
       console.log(values);      
     });
+   }
+
+   removeTodo(index:number){
+      this.store.dispatch(new TodoRemove(index));
    }
 
   ngOnInit(): void {
